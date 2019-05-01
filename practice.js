@@ -16,11 +16,11 @@
 
 //Code here
 var me = {
-  name: 'Curt Bryan',
+  name: "Curt Bryan",
   age: 25
-}
+};
 
-alert(me.name);
+// alert(me.name);
 ////////// PROBLEM 2 //////////
 
 /*
@@ -30,27 +30,27 @@ alert(me.name);
 
 //Code here
 var favoriteThings = {
-  band: 'Bayside',
-  food: 'Sushi',
-  person: 'Lola Jones',
-  book: 'Fight Club',
-  movie: 'Fight Club',
-  holiday: 'Halloween',
-}
+  band: "Bayside",
+  food: "Sushi",
+  person: "Lola Jones",
+  book: "Fight Club",
+  movie: "Fight Club",
+  holiday: "Halloween"
+};
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
-favoriteThings.car = 'Tesla';
-favoriteThings.brand = 'Fossil';
+favoriteThings.car = "Tesla";
+favoriteThings.brand = "Fossil";
 //Code here
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
-favoriteThings.food = 'Chicken Nuggets';
-favoriteThings.book = 'Harry Potter';
+favoriteThings.food = "Chicken Nuggets";
+favoriteThings.book = "Harry Potter";
 //Code here
 
 ////////// PROBLEM 3 //////////
@@ -64,17 +64,17 @@ favoriteThings.book = 'Harry Potter';
 */
 
 //Code here
-var backPack = {}
-var item = 'firstPocket'
-backPack['firstPocket'] = item
-backPack.firstPocket = 'chapstick'
-backPack.color = 'blue'
+var backPack = {};
+var item = "firstPocket";
+backPack["firstPocket"] = item;
+backPack.firstPocket = "chapstick";
+backPack.color = "blue";
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-alert(backPack)
+// alert(backPack);
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
@@ -82,17 +82,17 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
-console.log(backPack)
+console.log(backPack);
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
 var user2 = {
-  name: 'Bryan',
+  name: "Bryan",
   age: 24,
-  pwHash: 'U+Ldlngx2BYQk',
-  email: 'BryanSmith33@gmail.com',
-  birthday: '05/02/1990',
-  username: 'bryansmith33'
+  pwHash: "U+Ldlngx2BYQk",
+  email: "BryanSmith33@gmail.com",
+  birthday: "05/02/1990",
+  username: "bryansmith33"
 };
 // Do not edit the code above.
 
@@ -101,8 +101,8 @@ var user2 = {
   name -> 'Bryan G. Smith' and email -> 'bryan.smith@devmounta.in'.
   Make that change without modifying the original object code above.
 */
-user2.name = 'Bryan G. Smith'
-user2.email = 'bryan.smith@devmounta.in'
+user2.name = "Bryan G. Smith";
+user2.email = "bryan.smith@devmounta.in";
 //Code Here
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
@@ -115,14 +115,18 @@ user2.email = 'bryan.smith@devmounta.in'
 */
 
 //Code Here
-
+var methodCollection = {};
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
-
+methodCollection.alertHello = function() {
+  return alert("hello");
+};
+methodCollection.logHello = function() {
+  return console.log("hello");
+};
 //Code Here
-
 /*
   Now call your alertHello and logHello methods.
 */
@@ -137,7 +141,9 @@ user2.email = 'bryan.smith@devmounta.in'
 */
 
 //Code Here
-
+function makePerson(name, birthday, ssn) {
+  return { name, birthday, ssn };
+}
 ////////// PROBLEM 7 //////////
 
 /*
@@ -146,3 +152,6 @@ user2.email = 'bryan.smith@devmounta.in'
 */
 
 //Code Here
+function makeCard(cardNumber, expirationDate, securityCode) {
+  return { cardNumber, expirationDate, securityCode };
+}
